@@ -20,7 +20,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 ---
 
 ## Data Architecture
-
+![Data Architecture layout](/docs/data_architecture.png)
 
 ### BI: Analytics & Reporting (Data Analytics)
 
