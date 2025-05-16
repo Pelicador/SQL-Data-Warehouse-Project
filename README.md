@@ -4,7 +4,7 @@
 
 ### This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio projet highlights industry best practices in data engineering and analytics.
 ---
-## project Requirements
+## Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
 
@@ -19,6 +19,9 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
 ---
+
+## Data Architecture
+
 
 ### BI: Analytics & Reporting (Data Analytics)
 
