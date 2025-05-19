@@ -1,60 +1,39 @@
-# SQL-Data-Warehouse-Project
+## Executive Summary
 
-### Data warehouse with MS SQL Server, including ETL processes, data modeling, and analytics.
+This project demonstrates a comprehensive data warehousing and analytics solution that implements industry best practices in data engineering and analytics. The solution follows a three-layer Medallion Architecture (Bronze, Silver, and Gold) to transform raw data into actionable business insights. The project demonstrates proper data ingestion, transformation, quality control, and presentation techniques for a company that sells bikes, accessories, components, and clothing.
 
-### This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio projet highlights industry best practices in data engineering and analytics.
----
+## Project Overview
 
-### Building the Data Warehouse (Data Engineering)
+### Business Context
+The data warehouse integrates data from two source systems (ERP and CRM) to provide a unified view of customer information, product details, and sales transactions. This enables advanced analytics and reporting capabilities for business decision-making.
 
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-
----
+### Project Scope
+- Design a modern data warehouse using Medallion Architecture
+- Develop ETL pipelines for data ingestion and transformation
+- Create an optimized data model with fact and dimension tables
+- Implement data quality checks and validation
+- Provide a data catalog for analytics users
 
 ## Data Architecture
-![Data Architecture layout](/docs/data_architecture.png)
 
-### BI: Analytics & Reporting (Data Analytics)
+### Medallion Architecture
+The project implements a three-layer architecture:
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+1. **Bronze Layer**: Raw data ingested as-is from source systems
+2. **Silver Layer**: Cleansed, standardized, and normalized data
+3. **Gold Layer**: Business-ready data modeled in a star schema for reporting and analytics
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+![Medallion Architecture](https://img.shields.io/badge/Bronze-Raw%20Data-brown) → 
+![Silver Layer](https://img.shields.io/badge/Silver-Cleansed%20Data-silver) → 
+![Gold Layer](https://img.shields.io/badge/Gold-Business%20Ready-gold)
 
----
-## 📂 Repository Structure
-```
-data-warehouse-project/
-│
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── data_architecture.png           # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.png                   # Draw.io file for the data flow diagram
-│   ├── data_models.png              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-└── LICENSE                             # License information for the repository
+### Data Sources
+The project integrates data from two source systems:
 
-```
----
+**CRM System**:
+- `crm_cust_info`: Customer information (ID, name, marital status, gender)
+- `crm_prod_info`: Product information (ID, name, cost, product line, dates)
+- `crm_sales_detales`: Sales transactions (order number, customer, dates, quantities, prices)
+
+**ERP System**:
+
