@@ -105,8 +105,8 @@ The project begins by creating a new database named 'DataWarehouse' with the thr
    - Validates referential integrity between fact and dimension tables
    - Confirms relationships in the data model
   
-#### Table and Column Naming Conventions(./docs/naming_conventions.md)
-#### Gold Layer Data Catalog and Description(./docs/data_catalog.md)
+#### Table and Column Naming Conventions[naming conventions](/docs/naming_conventions.md)
+#### Gold Layer Data Catalog and Description[data catalog](/docs/data_catalog.md)
   
 This data warehouse project demonstrates a comprehensive approach to data integration and analytics. By following the Medallion Architecture and implementing robust data quality checks, the solution provides reliable business intelligence capabilities for a retail company selling bikes and related products. The scalable design ensures that additional data sources can be integrated in the future, and the standardized naming conventions make the system maintainable and understandable for all stakeholders.
 
