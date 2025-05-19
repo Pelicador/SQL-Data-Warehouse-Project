@@ -109,7 +109,7 @@ This data warehouse project demonstrates a comprehensive approach to data integr
 
   
 ---
-## 📂 Repository Structure
+## Repository Structure
 ```
 data-warehouse-project/
 │
