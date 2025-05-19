@@ -46,5 +46,15 @@ The project integrates data from two source systems:
 The project begins by creating a new database named 'DataWarehouse' with the three schemas `init_database.sql`
 
 ### Bronze Layer Implementation
+1. **Table Creation**:`ddl_bronze.sql`
+   - Creates tables matching the original data sources
+   - Maintains original column names and data types
+2. **Data Loading**: `proc_load_bronze.sql`
+   - Implements a stored procedure to load data from CSV files
+   - Truncates target tables if exist before loading to ensure clean data
+   - Uses BULK INSERT commands for efficient data loading
+   - Tracks processing time for performance monitoring
+  
+   
 
 
