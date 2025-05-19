@@ -2,6 +2,19 @@
 
 This project demonstrates a comprehensive data warehousing and analytics solution that implements industry best practices in data engineering and analytics. The solution follows a three-layer Medallion Architecture (Bronze, Silver, and Gold) to transform raw data into actionable business insights. The project demonstrates proper data ingestion, transformation, quality control, and presentation techniques for a retail company.
 
+## **Table of Contents**
+
+1. [Project Overview](#project-overview)
+2. [Data Architecture](#data-architecture)
+3. [Table Naming Conventions](#table-naming-conventions)
+   - [Bronze Rules](#bronze-rules)
+   - [Silver Rules](#silver-rules)
+   - [Gold Rules](#gold-rules)
+4. [Column Naming Conventions](#column-naming-conventions)
+   - [Surrogate Keys](#surrogate-keys)
+   - [Technical Columns](#technical-columns)
+5. [Stored Procedure](#stored-procedure-naming-conventions)
+
 ## Project Overview
 
 ### Business Context
