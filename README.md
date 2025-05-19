@@ -59,28 +59,39 @@ The project begins by creating a new database named 'DataWarehouse' with the thr
 1. **Table Creation**:`ddl_silver.sql`
    - Creates tables with improved data types and structure for data cleansing
    - Adds tracking columns like dwh_create_date to know when table last updated
-2. **Data Transformation**: `proc_load_bronze.sql`
+3. **Data Transformation**: `proc_load_bronze.sql`
      - Implements a stored procedure to load data from bronze with transformation
      - Implements complex transformation logic:
-     - Trimming spaces from text fields
-     - Normalizing values to more readable format (gender and marital status)
-     - Extracting category IDs and product keys
-     - Mapping product line codes to descriptive values
-     - Fixing date fields and recalculating incorrect sales amounts
-     - Handling missing values and invalid data
+         - Trimming spaces from text fields
+         - Normalizing values to more readable format (gender and marital status)
+         - Extracting category IDs and product keys
+         - Mapping product line codes to descriptive values
+         - Fixing date fields and recalculating incorrect sales amounts
+         - Handling missing values and invalid data
 
   ### Gold Layer Implementation
 1. **View Creation**:`ddl_gold.sql`
-   - Creates tables with improved data types and structure for data cleansing
-   - Adds tracking columns like dwh_create_date to know when table last updated
+   - Creates a star schema with dimension and fact tables:
+      - `gold.dim_customers`: Customer dimension
+      - `gold.dim_products`: Product dimension
+      - `gold.fact_sales`: Sales fact table
 3. **Data Enrichment**:
-   - Implements complex transformation logic:
-     - Trimming spaces from text fields
-     - Normalizing values to more readable format (gender and marital status)
-     - Extracting category IDs and product keys
-     - Mapping product line codes to descriptive values
-     - Fixing date fields and recalculating incorrect sales amounts
-     - Handling missing values and invalid data
+   - Renames columns to be more descriptive
+   - Creates surrogate keys for dimension tables
+   - Combines data from multiple source ERP and CRM for complete business view
+  
+### Data Quality Checks
+1. **Silver Layer Quality Checks**:
+   - Validates null or duplicate primary keys
+   - Checks for unwanted spaces in string fields
+   - Ensures data standardization and consistency
+   - Validates date ranges and order
+   - Verifies data consistency between related fields
+2. **Gold Layer Quality Checks**: 
+   - Ensures uniqueness of surrogate keys in dimension tables
+   - Validates referential integrity between fact and dimension tables
+   - Confirms relationships in the data model
+     
      
   
    
