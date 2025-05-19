@@ -43,6 +43,8 @@ The project integrates data from two source systems:
 
 ## Technical Implementation
 ### Database and Schema Creation
-The project begins by creating a new database named 'DataWarehouse' with three schemas:
+The project begins by creating a new database named 'DataWarehouse' with the three schemas `init_database.sql`
+
+### Bronze Layer Implementation
 
 
