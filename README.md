@@ -60,6 +60,7 @@ The project begins by creating a new database named 'DataWarehouse' with the thr
    - Creates tables with improved data types and structure for data cleansing
    - Adds tracking columns like dwh_create_date to know when table last updated
 2. **Data Transformation**: `proc_load_bronze.sql`
+     - Implements a stored procedure to load data from bronze with transformation
      - Implements complex transformation logic:
      - Trimming spaces from text fields
      - Normalizing values to more readable format (gender and marital status)
