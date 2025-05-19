@@ -43,14 +43,14 @@ The project implements a three-layer architecture:
 The project integrates data from two source systems:
 
 **CRM System**:
-- `crm_cust_info`: Customer information (ID, name, marital status, gender)
-- `crm_prod_info`: Product information (ID, name, cost, product line, dates)
-- `crm_sales_detales`: Sales transactions (order number, customer, dates, quantities, prices)
+- `crm_cust_info`: Customer information (cst_id, cst_key, cst_firstname, cst_lastname cst_marital_status, cst_gndr)
+- `crm_prod_info`: Product information (prd_id, prd_key, prd_name, prd_cost, prd_line, prd_start_dt, prd_end_dt)
+- `crm_sales_detales`: Sales transactions (sls_ord_num, sls_prd_key, sls_cust_id, sls_order_dt, sls_ship_dt, sls_due_dt, sls_sales, sls_quantity, sls_price)
 
 **ERP System**:
-- `erp_cust_az12`: Additional customer information (customer ID, birthdate, gender)
-- `erp_loc_a101`: Customer location information (customer ID, country)
-- `erp_px_cat_g1v2`: Additional product information (ID, category, subcategory, maintenance)
+- `erp_cust_az12`: Additional customer information (cid, bdate, gen)
+- `erp_loc_a101`: Customer location information (cid, cntry)
+- `erp_px_cat_g1v2`: Additional product information (id, cat, subcat, maintenance)
 
 ## Technical Implementation
 ### Database and Schema Creation
