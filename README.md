@@ -15,6 +15,7 @@ The data warehouse integrates data from two source systems (ERP and CRM) to prov
 - Provide a data catalog for analytics users
 
 ## Data Architecture
+![Data Architecture layout](/docs/data_architecture.png)
 
 ### Medallion Architecture
 The project implements a three-layer architecture:
@@ -39,4 +40,9 @@ The project integrates data from two source systems:
 - `erp_cust_az12`: Additional customer information (customer ID, birthdate, gender)
 - `erp_loc_a101`: Customer location information (customer ID, country)
 - `erp_px_cat_g1v2`: Additional product information (ID, category, subcategory, maintenance)
+
+## Technical Implementation
+### Database and Schema Creation
+The project begins by creating a new database named 'DataWarehouse' with three schemas:
+
 
