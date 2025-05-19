@@ -54,6 +54,33 @@ The project begins by creating a new database named 'DataWarehouse' with the thr
    - Truncates target tables if exist before loading to ensure clean data
    - Uses BULK INSERT commands for efficient data loading
    - Tracks processing time for performance monitoring
+
+  ### Silver Layer Implementation
+1. **Table Creation**:`ddl_silver.sql`
+   - Creates tables with improved data types and structure for data cleansing
+   - Adds tracking columns like dwh_create_date to know when table last updated
+2. **Data Transformation**: `proc_load_bronze.sql`
+     - Implements complex transformation logic:
+     - Trimming spaces from text fields
+     - Normalizing values to more readable format (gender and marital status)
+     - Extracting category IDs and product keys
+     - Mapping product line codes to descriptive values
+     - Fixing date fields and recalculating incorrect sales amounts
+     - Handling missing values and invalid data
+
+  ### Gold Layer Implementation
+1. **View Creation**:`ddl_gold.sql`
+   - Creates tables with improved data types and structure for data cleansing
+   - Adds tracking columns like dwh_create_date to know when table last updated
+3. **Data Enrichment**:
+   - Implements complex transformation logic:
+     - Trimming spaces from text fields
+     - Normalizing values to more readable format (gender and marital status)
+     - Extracting category IDs and product keys
+     - Mapping product line codes to descriptive values
+     - Fixing date fields and recalculating incorrect sales amounts
+     - Handling missing values and invalid data
+     
   
    
 
