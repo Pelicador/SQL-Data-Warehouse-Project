@@ -1,6 +1,6 @@
 ## Executive Summary
 
-This project demonstrates a comprehensive data warehousing and analytics solution that implements industry best practices in data engineering and analytics. The solution follows a three-layer Medallion Architecture (Bronze, Silver, and Gold) to transform raw data into actionable business insights. The project demonstrates proper data ingestion, transformation, quality control, and presentation techniques for a company that sells bikes, accessories, components, and clothing.
+This project demonstrates a comprehensive data warehousing and analytics solution that implements industry best practices in data engineering and analytics. The solution follows a three-layer Medallion Architecture (Bronze, Silver, and Gold) to transform raw data into actionable business insights. The project demonstrates proper data ingestion, transformation, quality control, and presentation techniques for a retail company.
 
 ## Project Overview
 
@@ -36,4 +36,7 @@ The project integrates data from two source systems:
 - `crm_sales_detales`: Sales transactions (order number, customer, dates, quantities, prices)
 
 **ERP System**:
+- `erp_cust_az12`: Additional customer information (customer ID, birthdate, gender)
+- `erp_loc_a101`: Customer location information (customer ID, country)
+- `erp_px_cat_g1v2`: Additional product information (ID, category, subcategory, maintenance)
 
