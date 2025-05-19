@@ -128,6 +128,8 @@ data-warehouse-project/
 │   ├── gold/                           # Scripts for creating analytical models
 │
 ├── tests/                              # Test scripts and quality files
+│   ├── quality_checks_gold.sql         # Gold layer quality checks
+│   ├── quality_checks_silver.sql       # Silver layer quality checks
 │
 ├── README.md                           # Project overview and instructions
 └── LICENSE                             # License information for the repository
