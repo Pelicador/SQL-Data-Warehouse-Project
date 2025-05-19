@@ -6,14 +6,12 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 
 1. [Project Overview](#project-overview)
 2. [Data Architecture](#data-architecture)
-3. [Table Naming Conventions](#table-naming-conventions)
-   - [Bronze Rules](#bronze-rules)
-   - [Silver Rules](#silver-rules)
-   - [Gold Rules](#gold-rules)
-4. [Column Naming Conventions](#column-naming-conventions)
-   - [Surrogate Keys](#surrogate-keys)
-   - [Technical Columns](#technical-columns)
-5. [Stored Procedure](#stored-procedure-naming-conventions)
+3. [Technical Implementation](#technical-implementation)
+   - [Bronze Layer Implementation](#bronze-layer-implementation)
+   - [Silver Layer Implementation](#silver-layer-implementation)
+   - [Gold Layer Implementation](#gold-layer-implementation)
+4. [Data Quality Checks](#data-quality-checks)
+5. [Repository Structure](#repository-structure)
 
 ## Project Overview
 
@@ -95,7 +93,7 @@ The project begins by creating a new database named 'DataWarehouse' with the thr
   
 ![Data Flow layout](/docs/data_flow.png)
   
-### Data Quality Checks
+## Data Quality Checks
 1. **Silver Layer Quality Checks**:
    - Validates null or duplicate primary keys
    - Checks for unwanted spaces in string fields
